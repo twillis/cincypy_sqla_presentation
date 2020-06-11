@@ -1,0 +1,86 @@
+* Intro to SQLAlchemy
+** Database Primer
+*** Relational Database
+    [[https://en.wikipedia.org/wiki/Relational_database][RDBMS]]
+    
+    - data storage
+      - structured
+      - efficient
+      - correct
+    - primitives
+      - table
+        - columns
+          - name
+          - data type
+          - constrain value
+            - nullable
+            - unique
+            - foreign key
+      - rows
+      - index
+    - server based
+      - postgres
+      - mysql/mariahdb
+      - oracle
+      - microsoft sql server
+      - db2
+    - file based
+      - sqlite
+
+*** SQL the language
+    [[https://en.wikipedia.org/wiki/SQL][SQL]](structured query language)
+
+    - DQL: data query language
+      - ex: select column from table where column = value
+    - DDL: data definition language
+      - ex: create table..., alter table...
+    - DML: data manipulation language
+      - ex: insert..., update...
+    - DCL: data control language
+      - ex: grant..., revoke...
+
+    [[https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/][more information]]
+
+*** Table Design 
+
+   - [[https://en.wikipedia.org/wiki/Database_normalization][normalization]]
+     - Fourth Normal Form is ideal
+     - Third Normal Form is practical
+   - relationships
+     - uses foreign keys
+     - establish a kind of relationship 
+       - one to many
+       - many to one
+       - many to many
+
+*** Resources
+    - [[https://www.sqltutorial.org/][sql tutorial]]
+    - [[https://use-the-index-luke.com/][use the index luke]]
+
+** SQLA: The database toolkit
+   - not a port of hibernate to python
+   - powerful
+   - flexible
+   - battle tested
+   - source code is a prime example of the power of python
+   - maintained by ONE PERSON
+   - [[https://docs.sqlalchemy.org/en/13/][the best docs]]
+   - [[https://xkcd.com/327/][prevent sql injection]]
+
+*** SqlAlchemy Core
+    - connect to database
+    - execute sql statements on connection and get results
+    - Table objects
+      - define them
+      - create them
+      - read existing table from a database
+      - build sql statements programatically
+*** SqlAlchemy ORM
+    - ORM = Object Relational Mapper
+      - class represents a table
+      - class instance represents a row in the table
+      - related queries represented as properties
+    - built on core
+    - allows for queries to return class instances instead of dict like
+*** Example
+    
